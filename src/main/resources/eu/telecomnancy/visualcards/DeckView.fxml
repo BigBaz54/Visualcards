@@ -33,9 +33,9 @@
         </ToolBar>
         <VBox prefHeight="175.0" prefWidth="154.0">
             <HBox alignment="TOP_CENTER" prefHeight="223.0" prefWidth="600.0">
-                <ImageView fx:id="deckImageView" fitHeight="150.0" fitWidth="100.0" pickOnBounds="true"
+                <ImageView fx:id="deckImageView" fitHeight="120.0" fitWidth="100.0" pickOnBounds="true"
                            preserveRatio="true"/>
-                <ImageView fx:id="activeCardImageView" fitHeight="150.0" fitWidth="100.0" pickOnBounds="true"
+                <ImageView fx:id="activeCardImageView" fitHeight="120.0" fitWidth="100.0" pickOnBounds="true"
                            preserveRatio="true"/>
                 <VBox.margin>
                     <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>

@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Random;
 
-// Représente une jeu de cartes. Une variable référence l'image représentant le dos d'une carte.
+// Représente un jeu de cartes. Une variable référence l'image représentant le dos d'une carte.
 public class DeckOfCards {
     private ArrayList<Card> deck;
     private Image backOfCardImage;

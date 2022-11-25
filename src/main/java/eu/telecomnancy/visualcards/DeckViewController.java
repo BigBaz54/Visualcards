@@ -37,8 +37,8 @@ public class DeckViewController implements Initializable {
                 BorderPane cardborder = new BorderPane();
                 cardborder.setStyle("-fx-border-color: black");
                 ImageView cardj = new ImageView();
-                cardj.setFitHeight(120);
-                cardj.setFitWidth(70);
+                cardj.setFitHeight(80);
+                cardj.setFitWidth(55);
                 cardj.setImage(deck.getDeck().get(i * 13 + j).getImage());
                 cardborder.setCenter(cardj);
                 cardPane.addColumn(j, cardborder);
@@ -69,8 +69,8 @@ public class DeckViewController implements Initializable {
                 BorderPane cardborder = new BorderPane();
                 cardborder.setStyle("-fx-border-color: black");
                 ImageView cardj = new ImageView();
-                cardj.setFitHeight(120);
-                cardj.setFitWidth(70);
+                cardj.setFitHeight(80);
+                cardj.setFitWidth(55);
                 cardj.setImage(deck.getDeck().get(i * 13 + j).getImage());
                 cardborder.setCenter(cardj);
                 cardPane.addColumn(j, cardborder);

@@ -1,12 +1,17 @@
 package eu.telecomnancy.visualcards;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 
-public class DeckView implements Observer {
+import java.net.URL;
+import java.util.ResourceBundle;
+
+public class DeckView implements Initializable, Observer {
     @FXML
     private Button nextCardButton;
     @FXML
@@ -17,9 +22,10 @@ public class DeckView implements Observer {
     private GridPane cardPane;
     private DeckOfCards jeu;
 
-    public DeckView(DeckOfCards jeu) {
-        this.jeu = jeu;
+    public void initialize(URL location, ResourceBundle resources) {
+        this.jeu = new DeckOfCards();
         this.jeu.addObserver(this);
+        this.jeu.shuffle();
     }
 
     @Override
@@ -40,6 +46,18 @@ public class DeckView implements Observer {
                 cardborder.setCenter(cardj);
                 cardPane.addColumn(j, cardborder);
             }
+            if (jeu.getActiveCard() != null) {
+                activeCardImageView.setImage(jeu.activeCard.getImage());
+            }
+            deckImageView.setImage(jeu.getBackOfCardImage());
         }
+    }
+
+    public void shuffle(ActionEvent actionEvent) {
+        jeu.shuffle();
+    }
+
+    public void nextCard(ActionEvent actionEvent) {
+        jeu.nextCard();
     }
 }

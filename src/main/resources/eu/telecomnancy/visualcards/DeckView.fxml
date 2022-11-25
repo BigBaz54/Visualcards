@@ -6,12 +6,11 @@
 <?import javafx.scene.layout.*?>
 
 <AnchorPane prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="eu.telecomnancy.visualcards.DeckViewController">
+            fx:controller="eu.telecomnancy.visualcards.DeckView">
     <VBox prefHeight="200.0" prefWidth="600.0">
         <MenuBar>
             <Menu text="File">
                 <MenuItem text="New"/>
-                <MenuItem mnemonicParsing="false" onAction="#refresh" text="Refresh"/>
                 <SeparatorMenuItem/>
                 <MenuItem text="Exit"/>
             </Menu>
@@ -28,9 +27,9 @@
         </MenuBar>
         <ToolBar prefHeight="40.0" prefWidth="200.0">
             <Button mnemonicParsing="false" text="Draw a Card"/>
-            <Button fx:id="nextCardButton" mnemonicParsing="false" onAction="#nextCardButtonPushed" text="Next Card"
+            <Button fx:id="nextCardButton" onAction="#nextCard" mnemonicParsing="false" text="Next Card"
                     textAlignment="CENTER"/>
-            <Button mnemonicParsing="false" text="Shuffle"/>
+            <Button onAction="#shuffle" mnemonicParsing="false" text="Shuffle"/>
         </ToolBar>
         <VBox prefHeight="175.0" prefWidth="154.0">
             <HBox alignment="TOP_CENTER" prefHeight="223.0" prefWidth="600.0">

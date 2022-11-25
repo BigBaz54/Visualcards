@@ -1,9 +1,9 @@
 package eu.telecomnancy.visualcards;
 
-import java.util.List;
+import java.util.ArrayList;
 
 public abstract class Observed {
-    private List<Observer> obsList;
+    private ArrayList<Observer> obsList = new ArrayList<>();
 
     public void addObserver(Observer obs) {
         obsList.add(obs);

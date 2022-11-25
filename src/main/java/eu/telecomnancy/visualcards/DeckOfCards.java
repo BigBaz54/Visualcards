@@ -1,11 +1,14 @@
 package eu.telecomnancy.visualcards;
 
+import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.image.Image;
 
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Random;
+import java.util.ResourceBundle;
 
 // Représente un jeu de cartes. Une variable référence l'image représentant le dos d'une carte.
 public class DeckOfCards extends Observed {
@@ -13,6 +16,7 @@ public class DeckOfCards extends Observed {
     private Image backOfCardImage;
 
     int topCard=0;
+    Card activeCard;
 
     /**
      * This is a 1 argument constructor that passes in a collection
@@ -33,9 +37,7 @@ public class DeckOfCards extends Observed {
      */
     public DeckOfCards()
     {
-
         deck = new ArrayList<>();
-
         for(CardColor color : CardColor.values()) {
             for (CardValue value : CardValue.values()) {
                 deck.add(new Card(value,color));
@@ -76,12 +78,18 @@ public class DeckOfCards extends Observed {
         return result;
     }
 
+    public Card getActiveCard() {
+        return this.activeCard;
+    }
+
     /**
      * This method will shuffle the deck of cards
      */
+    @FXML
     public void shuffle()
     {
         Collections.shuffle(deck);
+        alertObservers();
     }
 
     /**
@@ -89,8 +97,14 @@ public class DeckOfCards extends Observed {
      */
     public void sort() {
         Collections.sort(deck);
+        alertObservers();
     }
 
+    @FXML
+    public void nextCard() {
+        this.activeCard = dealTopCard();
+        alertObservers();
+    }
     /**
      * This method will draw a card from the deck at a defined place (i)
      */

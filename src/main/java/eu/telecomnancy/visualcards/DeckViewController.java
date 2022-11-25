@@ -13,7 +13,14 @@ import java.util.ResourceBundle;
 
 public class DeckViewController implements Initializable {
 
-
+    @FXML
+    private Button nextCardButton;
+    @FXML
+    private ImageView deckImageView;
+    @FXML
+    private ImageView activeCardImageView;
+    @FXML
+    private GridPane cardPane;
     private DeckOfCards deck;
 
     @Override
@@ -30,8 +37,8 @@ public class DeckViewController implements Initializable {
                 BorderPane cardborder = new BorderPane();
                 cardborder.setStyle("-fx-border-color: black");
                 ImageView cardj = new ImageView();
-                cardj.setFitHeight(80);
-                cardj.setFitWidth(55);
+                cardj.setFitHeight(120);
+                cardj.setFitWidth(70);
                 cardj.setImage(deck.getDeck().get(i * 13 + j).getImage());
                 cardborder.setCenter(cardj);
                 cardPane.addColumn(j, cardborder);
@@ -62,8 +69,8 @@ public class DeckViewController implements Initializable {
                 BorderPane cardborder = new BorderPane();
                 cardborder.setStyle("-fx-border-color: black");
                 ImageView cardj = new ImageView();
-                cardj.setFitHeight(80);
-                cardj.setFitWidth(55);
+                cardj.setFitHeight(120);
+                cardj.setFitWidth(70);
                 cardj.setImage(deck.getDeck().get(i * 13 + j).getImage());
                 cardborder.setCenter(cardj);
                 cardPane.addColumn(j, cardborder);

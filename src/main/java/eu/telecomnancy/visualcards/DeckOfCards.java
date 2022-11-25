@@ -8,7 +8,7 @@ import java.util.Collections;
 import java.util.Random;
 
 // Représente un jeu de cartes. Une variable référence l'image représentant le dos d'une carte.
-public class DeckOfCards {
+public class DeckOfCards extends Observed {
     private ArrayList<Card> deck;
     private Image backOfCardImage;
 

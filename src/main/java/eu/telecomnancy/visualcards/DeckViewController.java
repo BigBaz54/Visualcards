@@ -13,14 +13,7 @@ import java.util.ResourceBundle;
 
 public class DeckViewController implements Initializable {
 
-    @FXML
-    private Button nextCardButton;
-    @FXML
-    private ImageView deckImageView;
-    @FXML
-    private ImageView activeCardImageView;
-    @FXML
-    private GridPane cardPane;
+
     private DeckOfCards deck;
 
     @Override

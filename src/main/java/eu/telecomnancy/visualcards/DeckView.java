@@ -13,8 +13,6 @@ import java.util.ResourceBundle;
 
 public class DeckView implements Initializable, Observer {
     @FXML
-    private Button nextCardButton;
-    @FXML
     private ImageView deckImageView;
     @FXML
     private ImageView activeCardImageView;

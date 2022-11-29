@@ -7,6 +7,7 @@ import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
+import org.controlsfx.dialog.CommandLinksDialog;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -21,6 +22,8 @@ public class DeckView implements Initializable, Observer {
     private DeckOfCards jeu;
 
     public void initialize(URL location, ResourceBundle resources) {
+        // pas beau du tout
+        // mais je ne sais pas comment passer le model en paramètre au chargement du FXML
         this.jeu = new DeckOfCards();
         this.jeu.addObserver(this);
         this.jeu.shuffle();
@@ -52,18 +55,18 @@ public class DeckView implements Initializable, Observer {
     }
 
     public void shuffle(ActionEvent actionEvent) {
-        jeu.shuffle();
+        new ShuffleCommand(jeu).execute();
     }
 
-    public void nextCard(ActionEvent actionEvent) {
-        jeu.nextCard();
+    public void nextCard() {
+        new NextCardCommand(jeu).execute();
     }
 
     public void toggleFisherYatesShuffle() {
-        jeu.setShuffleStrategy(new FisherYatesShuffle());
+        new FisherYatesShuffleCommand(jeu).execute();
     }
 
     public void toggleDefaultShuffle() {
-        jeu.setShuffleStrategy(new DefaultShuffle());
+        new DefaultShuffleCommand(jeu).execute();
     }
 }

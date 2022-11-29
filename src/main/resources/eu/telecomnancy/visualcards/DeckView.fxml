@@ -30,7 +30,6 @@
             </Menu>
         </MenuBar>
         <ToolBar prefHeight="40.0" prefWidth="200.0">
-            <Button mnemonicParsing="false" text="Draw a Card"/>
             <Button fx:id="nextCardButton" onAction="#nextCard" mnemonicParsing="false" text="Next Card"
                     textAlignment="CENTER"/>
             <Button onAction="#shuffle" mnemonicParsing="false" text="Shuffle"/>

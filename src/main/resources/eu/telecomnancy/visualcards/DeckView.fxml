@@ -18,19 +18,21 @@
                 <MenuItem onAction="#shuffle" text="Shuffle"/>
                 <MenuItem text="Sort"/>
             </Menu>
-            <Menu text="Shuffle">
+            <Menu text="Shuffle Strategy">
                 <MenuItem text="Default" onAction="#toggleDefaultShuffle"/>
                 <MenuItem text="Fisher-Yates" onAction="#toggleFisherYatesShuffle"/>
             </Menu>
             <Menu text="Draw">
-                <MenuItem text="Draw a Random Card"/>
-                <MenuItem text="Draw next Card"/>
+                <MenuItem text="Draw a Random Card" onAction="#randomCard"/>
+                <MenuItem text="Draw next Card" onAction="#nextCard"/>
                 <SeparatorMenuItem/>
                 <MenuItem text="About"/>
             </Menu>
         </MenuBar>
         <ToolBar prefHeight="40.0" prefWidth="200.0">
             <Button fx:id="nextCardButton" onAction="#nextCard" mnemonicParsing="false" text="Next Card"
+                    textAlignment="CENTER"/>
+            <Button fx:id="randomButton" onAction="#randomCard" mnemonicParsing="false" text="Random Card"
                     textAlignment="CENTER"/>
             <Button onAction="#shuffle" mnemonicParsing="false" text="Shuffle"/>
         </ToolBar>

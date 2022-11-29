@@ -62,6 +62,10 @@ public class DeckView implements Initializable, Observer {
         new NextCardCommand(jeu).execute();
     }
 
+    public void randomCard() {
+        new RandomCardCommand(jeu).execute();
+    }
+
     public void toggleFisherYatesShuffle() {
         new FisherYatesShuffleCommand(jeu).execute();
     }

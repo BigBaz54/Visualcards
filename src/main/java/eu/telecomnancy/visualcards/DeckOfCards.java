@@ -93,7 +93,6 @@ public class DeckOfCards extends Observed {
     /**
      * This method will shuffle the deck of cards
      */
-    @FXML
     public void shuffle()
     {
         this.shuffleStrategy.shuffle(deck);
@@ -108,11 +107,16 @@ public class DeckOfCards extends Observed {
         alertObservers();
     }
 
-    @FXML
     public void nextCard() {
         this.activeCard = dealTopCard();
         alertObservers();
     }
+
+    public void randomCard() {
+        this.activeCard = drawARandomCard();
+        alertObservers();
+    }
+
     /**
      * This method will draw a card from the deck at a defined place (i)
      */

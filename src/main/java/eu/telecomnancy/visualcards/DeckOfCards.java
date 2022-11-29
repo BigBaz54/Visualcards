@@ -82,10 +82,8 @@ public class DeckOfCards extends Observed {
         return this.activeCard;
     }
 
-    public void setShuffleStrategy(int strat) {
-        if (strat == 0) this.shuffleStrategy = new DefaultShuffle();
-        else if (strat == 1) this.shuffleStrategy = new FisherYatesShuffle();
-        else System.out.println("Cette ShuffleStrategy n'existe pas");
+    public void setShuffleStrategy(ShuffleStrategy strat) {
+        this.shuffleStrategy = strat;
     }
 
     public ShuffleStrategy getShuffleStrategy() {

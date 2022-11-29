@@ -60,10 +60,10 @@ public class DeckView implements Initializable, Observer {
     }
 
     public void toggleFisherYatesShuffle() {
-        jeu.setShuffleStrategy(1);
+        jeu.setShuffleStrategy(new FisherYatesShuffle());
     }
 
     public void toggleDefaultShuffle() {
-        jeu.setShuffleStrategy(0);
+        jeu.setShuffleStrategy(new DefaultShuffle());
     }
 }

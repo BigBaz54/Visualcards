@@ -18,6 +18,10 @@
                 <MenuItem onAction="#shuffle" text="Shuffle"/>
                 <MenuItem text="Sort"/>
             </Menu>
+            <Menu text="Shuffle">
+                <MenuItem text="Default" onAction="#toggleDefaultShuffle"/>
+                <MenuItem text="Fisher-Yates" onAction="#toggleFisherYatesShuffle"/>
+            </Menu>
             <Menu text="Draw">
                 <MenuItem text="Draw a Random Card"/>
                 <MenuItem text="Draw next Card"/>

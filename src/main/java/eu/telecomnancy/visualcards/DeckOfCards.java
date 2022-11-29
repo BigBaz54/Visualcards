@@ -14,7 +14,7 @@ import java.util.ResourceBundle;
 public class DeckOfCards extends Observed {
     private ArrayList<Card> deck;
     private Image backOfCardImage;
-
+    private ShuffleStrategy shuffleStrategy = new DefaultShuffle();
     int topCard=0;
     Card activeCard;
 
@@ -82,13 +82,23 @@ public class DeckOfCards extends Observed {
         return this.activeCard;
     }
 
+    public void setShuffleStrategy(int strat) {
+        if (strat == 0) this.shuffleStrategy = new DefaultShuffle();
+        else if (strat == 1) this.shuffleStrategy = new FisherYatesShuffle();
+        else System.out.println("Cette ShuffleStrategy n'existe pas");
+    }
+
+    public ShuffleStrategy getShuffleStrategy() {
+        return this.shuffleStrategy;
+    }
+
     /**
      * This method will shuffle the deck of cards
      */
     @FXML
     public void shuffle()
     {
-        Collections.shuffle(deck);
+        this.shuffleStrategy.shuffle(deck);
         alertObservers();
     }
 

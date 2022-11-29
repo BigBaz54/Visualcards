@@ -6,8 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="9ab4138a-0a1e-4a5e-bd05-145e2aade408" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/eu/telecomnancy/visualcards/DeckOfCards.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/eu/telecomnancy/visualcards/DeckOfCards.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/eu/telecomnancy/visualcards/DeckView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/eu/telecomnancy/visualcards/DeckView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/eu/telecomnancy/visualcards/DeckViewController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/eu/telecomnancy/visualcards/DeckView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/eu/telecomnancy/visualcards/DeckView.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +82,7 @@
       <workItem from="1669382824177" duration="14336000" />
       <workItem from="1669729580003" duration="192000" />
       <workItem from="1669734524514" duration="78000" />
-      <workItem from="1669735878146" duration="510000" />
+      <workItem from="1669735878146" duration="4188000" />
     </task>
     <servers />
   </component>

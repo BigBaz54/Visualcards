@@ -20,7 +20,7 @@ public class DeckView implements Initializable, Observer {
     private DeckOfCards jeu;
 
     public void initialize(URL location, ResourceBundle resources) {
-        this.jeu.shuffle();
+        this.react();
     }
 
     public DeckView(DeckOfCards jeu) {

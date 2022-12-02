@@ -6,8 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="9ab4138a-0a1e-4a5e-bd05-145e2aade408" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/eu/telecomnancy/visualcards/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/eu/telecomnancy/visualcards/Command.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/eu/telecomnancy/visualcards/DeckOfCards.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/eu/telecomnancy/visualcards/DeckOfCards.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/eu/telecomnancy/visualcards/DeckView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/eu/telecomnancy/visualcards/DeckView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/eu/telecomnancy/visualcards/DefaultShuffleCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/eu/telecomnancy/visualcards/DefaultShuffleCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/eu/telecomnancy/visualcards/FisherYatesShuffleCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/eu/telecomnancy/visualcards/FisherYatesShuffleCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/eu/telecomnancy/visualcards/NextCardCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/eu/telecomnancy/visualcards/NextCardCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/eu/telecomnancy/visualcards/RandomCardCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/eu/telecomnancy/visualcards/RandomCardCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/eu/telecomnancy/visualcards/ShuffleCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/eu/telecomnancy/visualcards/ShuffleCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/eu/telecomnancy/visualcards/DeckView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/eu/telecomnancy/visualcards/DeckView.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -47,6 +53,9 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RunManager">
     <configuration name="visualcards [run]" type="GradleRunConfiguration" factoryName="Gradle" nameIsGenerated="true">
@@ -82,7 +91,9 @@
       <workItem from="1669382824177" duration="14336000" />
       <workItem from="1669729580003" duration="192000" />
       <workItem from="1669734524514" duration="78000" />
-      <workItem from="1669735878146" duration="8366000" />
+      <workItem from="1669735878146" duration="8501000" />
+      <workItem from="1669883492872" duration="705000" />
+      <workItem from="1669986159587" duration="4057000" />
     </task>
     <servers />
   </component>

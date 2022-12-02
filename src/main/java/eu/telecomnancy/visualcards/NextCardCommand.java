@@ -7,6 +7,8 @@ public class NextCardCommand extends Command {
     }
 
     void execute() {
+        saveBackup();
         jeu.nextCard();
+        jeu.history.push(this);
     }
 }

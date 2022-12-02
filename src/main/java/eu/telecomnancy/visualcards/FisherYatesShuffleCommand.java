@@ -7,6 +7,8 @@ public class FisherYatesShuffleCommand extends Command {
 
     @Override
     void execute() {
+        saveBackup();
         jeu.setShuffleStrategy(new FisherYatesShuffle());
+        jeu.history.push(this);
     }
 }

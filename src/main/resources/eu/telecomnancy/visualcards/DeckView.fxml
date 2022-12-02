@@ -35,6 +35,8 @@
             <Button fx:id="randomButton" onAction="#randomCard" mnemonicParsing="false" text="Random Card"
                     textAlignment="CENTER"/>
             <Button onAction="#shuffle" mnemonicParsing="false" text="Shuffle"/>
+            <Button onAction="#undo" mnemonicParsing="false" text="Undo"/>
+            <Button onAction="#printHistory" mnemonicParsing="false" text="printHistory"/>
         </ToolBar>
         <VBox prefHeight="175.0" prefWidth="154.0">
             <HBox alignment="TOP_CENTER" prefHeight="223.0" prefWidth="600.0">

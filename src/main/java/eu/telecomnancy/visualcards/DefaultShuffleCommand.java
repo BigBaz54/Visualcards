@@ -7,6 +7,8 @@ public class DefaultShuffleCommand extends Command {
 
     @Override
     void execute() {
+        saveBackup();
         jeu.setShuffleStrategy(new DefaultShuffle());
+        jeu.history.push(this);
     }
 }

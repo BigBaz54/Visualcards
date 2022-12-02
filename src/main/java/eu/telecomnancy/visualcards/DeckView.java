@@ -73,4 +73,12 @@ public class DeckView implements Initializable, Observer {
     public void toggleDefaultShuffle() {
         new DefaultShuffleCommand(jeu).execute();
     }
+
+    public void undo() {
+        new UndoCommand(jeu).execute();
+    }
+
+    public void printHistory() {
+        jeu.printHistory();
+    }
 }

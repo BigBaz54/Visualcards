@@ -7,6 +7,8 @@ public class ShuffleCommand extends Command {
     }
 
     public void execute() {
+        saveBackup();
         jeu.shuffle();
+        jeu.history.push(this);
     }
 }

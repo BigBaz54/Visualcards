@@ -17,6 +17,7 @@ public class DeckOfCards extends Observed {
     private ShuffleStrategy shuffleStrategy = new DefaultShuffle();
     int topCard=0;
     Card activeCard;
+    CommandHistory history = new CommandHistory();
 
     /**
      * This is a 1 argument constructor that passes in a collection
@@ -82,6 +83,10 @@ public class DeckOfCards extends Observed {
         return this.activeCard;
     }
 
+    public int getTopCard() {
+        return this.topCard;
+    }
+
     public void setShuffleStrategy(ShuffleStrategy strat) {
         this.shuffleStrategy = strat;
     }
@@ -130,7 +135,20 @@ public class DeckOfCards extends Observed {
     public Card drawARandomCard() {
         var index=new Random().nextInt(52);
         return deck.get(index);
+    }
 
+    public void undo() {
+        BackupDeck commandBackup = history.pop().backup;
+        deck = commandBackup.deck;
+        backOfCardImage = commandBackup.backOfCardImage;
+        shuffleStrategy = commandBackup.shuffleStrategy;;
+        topCard = commandBackup.topCard;;
+        activeCard = commandBackup.activeCard;
+        alertObservers();
+    }
+
+    public void printHistory() {
+        System.out.println(history.toString());
     }
 
 

@@ -7,6 +7,8 @@ public class RandomCardCommand extends Command {
     }
 
     void execute() {
+        saveBackup();
         jeu.randomCard();
+        jeu.history.push(this);
     }
 }

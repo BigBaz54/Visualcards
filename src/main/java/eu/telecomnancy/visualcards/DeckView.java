@@ -3,11 +3,9 @@ package eu.telecomnancy.visualcards;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
-import org.controlsfx.dialog.CommandLinksDialog;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -22,11 +20,12 @@ public class DeckView implements Initializable, Observer {
     private DeckOfCards jeu;
 
     public void initialize(URL location, ResourceBundle resources) {
-        // pas beau du tout
-        // mais je ne sais pas comment passer le model en paramètre au chargement du FXML
-        this.jeu = new DeckOfCards();
-        this.jeu.addObserver(this);
         this.jeu.shuffle();
+    }
+
+    public DeckView(DeckOfCards jeu) {
+        this.jeu = jeu;
+        this.jeu.addObserver(this);
     }
 
     @Override
@@ -34,9 +33,9 @@ public class DeckView implements Initializable, Observer {
         cardPane.getChildren().clear();
         for (int i = 0; i < 4; i++) {
             cardPane.addRow(i);
-            cardPane.setVgap(10);
-            cardPane.setHgap(10);
-            cardPane.gridLinesVisibleProperty().setValue(true);
+            cardPane.setVgap(5);
+            cardPane.setHgap(5);
+            cardPane.gridLinesVisibleProperty().setValue(false);
             for (int j = 0; j < 13; j++) {
                 BorderPane cardborder = new BorderPane();
                 cardborder.setStyle("-fx-border-color: black");

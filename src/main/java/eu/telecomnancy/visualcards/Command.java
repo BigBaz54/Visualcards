@@ -14,6 +14,6 @@ public abstract class Command {
     }
 
     public String toString() {
-        return getClass().getName();
+        return "\n"+getClass().getName();
     }
 }

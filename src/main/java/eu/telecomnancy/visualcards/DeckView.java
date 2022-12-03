@@ -52,6 +52,8 @@ public class DeckView implements Initializable, Observer {
             }
             if (jeu.getActiveCard() != null) {
                 activeCardImageView.setImage(jeu.activeCard.getImage());
+            } else {
+                activeCardImageView.setImage(null);
             }
             deckImageView.setImage(jeu.getBackOfCardImage());
         }

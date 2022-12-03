@@ -10,7 +10,7 @@ public abstract class Command {
     abstract void execute();
 
     protected void saveBackup() {
-        backup = new BackupDeck(jeu.getDeck(), jeu.getBackOfCardImage(), jeu.getShuffleStrategy(), jeu.getTopCard(), jeu.getActiveCard());
+        backup = new BackupDeck(jeu.getDeck(), jeu.getBackOfCardImage(), jeu.getShuffleStrategy(), jeu.getTopCard(), jeu.getActiveCard(), jeu.getNbCards());
     }
 
     public String toString() {

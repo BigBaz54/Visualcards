@@ -1,5 +1,5 @@
 package eu.telecomnancy.visualcards;
 
-public enum CardColor {
+public enum CardClassicColor {
     TREFLE,CARREAU,COEUR,PIQUE
 }

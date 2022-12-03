@@ -31,20 +31,24 @@ public class DeckView implements Initializable, Observer {
     @Override
     public void react() {
         cardPane.getChildren().clear();
-        for (int i = 0; i < 4; i++) {
+        int nbRows = jeu.nbCards>52 ? 5 : 4;
+        int nbColumn = (int) Math.ceil(jeu.getNbCards()/4);
+        for (int i = 0; i < nbRows; i++) {
             cardPane.addRow(i);
             cardPane.setVgap(5);
             cardPane.setHgap(5);
             cardPane.gridLinesVisibleProperty().setValue(false);
-            for (int j = 0; j < 13; j++) {
-                BorderPane cardborder = new BorderPane();
-                cardborder.setStyle("-fx-border-color: black");
-                ImageView cardj = new ImageView();
-                cardj.setFitHeight(80);
-                cardj.setFitWidth(55);
-                cardj.setImage(jeu.getDeck().get(i * 13 + j).getImage());
-                cardborder.setCenter(cardj);
-                cardPane.addColumn(j, cardborder);
+            for (int j = 0; j < nbColumn; j++) {
+                if ((i * nbColumn + j)<jeu.nbCards) {
+                    BorderPane cardborder = new BorderPane();
+                    cardborder.setStyle("-fx-border-color: black; -fx-border-radius: 5px");
+                    ImageView cardj = new ImageView();
+                    cardj.setFitHeight(80);
+                    cardj.setFitWidth(55);
+                    cardj.setImage(jeu.getDeck().get(i * nbColumn + j).getImage());
+                    cardborder.setCenter(cardj);
+                    cardPane.addColumn(j, cardborder);
+                }
             }
             if (jeu.getActiveCard() != null) {
                 activeCardImageView.setImage(jeu.activeCard.getImage());
@@ -53,7 +57,7 @@ public class DeckView implements Initializable, Observer {
         }
     }
 
-    public void shuffle(ActionEvent actionEvent) {
+    public void shuffle() {
         new ShuffleCommand(jeu).execute();
     }
 
@@ -79,5 +83,17 @@ public class DeckView implements Initializable, Observer {
 
     public void printHistory() {
         jeu.printHistory();
+    }
+
+    public void classicGame() {
+        new ClassicGameCommand(jeu).execute();
+    }
+
+    public void scopaGame() {
+        new ScopaGameCommand(jeu).execute();
+    }
+
+    public void beloteGame() {
+        new BeloteGameCommand(jeu).execute();
     }
 }

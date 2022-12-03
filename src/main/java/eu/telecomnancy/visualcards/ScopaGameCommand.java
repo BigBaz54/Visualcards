@@ -1,15 +1,15 @@
 package eu.telecomnancy.visualcards;
 
-public class DefaultShuffleCommand extends Command {
+public class ScopaGameCommand extends Command {
 
-    DefaultShuffleCommand(DeckOfCards jeu) {
+    ScopaGameCommand(DeckOfCards jeu) {
         super(jeu);
     }
 
     @Override
     void execute() {
         saveBackup();
-        jeu.setShuffleStrategy(new DefaultShuffle());
+        jeu.updateGame(new DeckOfCardsScopa());
         jeu.history.push(this);
     }
 }

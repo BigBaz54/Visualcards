@@ -1,15 +1,15 @@
 package eu.telecomnancy.visualcards;
 
-public class DefaultShuffleCommand extends Command {
+public class ClassicGameCommand extends Command {
 
-    DefaultShuffleCommand(DeckOfCards jeu) {
+    ClassicGameCommand(DeckOfCards jeu) {
         super(jeu);
     }
 
     @Override
     void execute() {
         saveBackup();
-        jeu.setShuffleStrategy(new DefaultShuffle());
+        jeu.updateGame(new DeckOfCardsClassic());
         jeu.history.push(this);
     }
 }

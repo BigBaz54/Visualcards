@@ -11,44 +11,15 @@ import java.util.Random;
 import java.util.ResourceBundle;
 
 // Représente un jeu de cartes. Une variable référence l'image représentant le dos d'une carte.
-public class DeckOfCards extends Observed {
-    private ArrayList<Card> deck;
-    private Image backOfCardImage;
-    private ShuffleStrategy shuffleStrategy = new DefaultShuffle();
-    int topCard=0;
-    Card activeCard;
-    CommandHistory history = new CommandHistory();
+public abstract class DeckOfCards extends Observed {
 
-    /**
-     * This is a 1 argument constructor that passes in a collection
-     * of Card objects
-     * @param deck le jeu de carte pour initialiser le jeu
-     */
-    public DeckOfCards(ArrayList<Card> deck) {
-        this.deck = deck;
-        URL imageFile=getClass().getResource("images/black_joker.png");
-        if (imageFile!=null) {
-            backOfCardImage = new Image(imageFile.toString());
-        }
-
-    }
-
-    /**
-     * This is a zero argument constructor that will build a full Deck of Cards
-     */
-    public DeckOfCards()
-    {
-        deck = new ArrayList<>();
-        for(CardColor color : CardColor.values()) {
-            for (CardValue value : CardValue.values()) {
-                deck.add(new Card(value,color));
-            }
-        }
-        URL imageFile=getClass().getResource("images/black_joker.png");
-        if (imageFile!=null) {
-            backOfCardImage = new Image(imageFile.toString());
-        }
-    }
+    protected ArrayList<Card> deck;
+    protected Image backOfCardImage;
+    protected ShuffleStrategy shuffleStrategy = new DefaultShuffle();
+    protected int topCard=0;
+    protected Card activeCard;
+    protected CommandHistory history = new CommandHistory();
+    protected int nbCards;
 
     public ArrayList<Card> getDeck() {
         return deck;
@@ -56,6 +27,16 @@ public class DeckOfCards extends Observed {
 
     public void setDeck(ArrayList<Card> deck) {
         this.deck = deck;
+        alertObservers();
+    }
+
+    public void setNbCards(int nbCards) {
+        this.nbCards = nbCards;
+        alertObservers();
+    }
+
+    public int getNbCards() {
+        return nbCards;
     }
 
     public Image getBackOfCardImage() {
@@ -66,14 +47,11 @@ public class DeckOfCards extends Observed {
         this.backOfCardImage = backOfCardImage;
     }
 
-    /**
-     * This method will "deal" the top card off the deck. At the end of the deck we start over at the beginning
-     */
     public Card dealTopCard()
     {
         Card result=deck.get(topCard);
         topCard=topCard+1;
-        if (topCard>51) {
+        if (topCard>nbCards-1) {
             topCard=0;
         }
         return result;
@@ -81,6 +59,10 @@ public class DeckOfCards extends Observed {
 
     public Card getActiveCard() {
         return this.activeCard;
+    }
+
+    public void setTopCard(int topCard) {
+        this.topCard = topCard;
     }
 
     public int getTopCard() {
@@ -95,20 +77,8 @@ public class DeckOfCards extends Observed {
         return this.shuffleStrategy;
     }
 
-    /**
-     * This method will shuffle the deck of cards
-     */
-    public void shuffle()
-    {
+    public void shuffle() {
         this.shuffleStrategy.shuffle(deck);
-        alertObservers();
-    }
-
-    /**
-     * This method will "sort" the deck
-     */
-    public void sort() {
-        Collections.sort(deck);
         alertObservers();
     }
 
@@ -122,18 +92,12 @@ public class DeckOfCards extends Observed {
         alertObservers();
     }
 
-    /**
-     * This method will draw a card from the deck at a defined place (i)
-     */
     public Card drawACard(int i) {
         return deck.get(i);
     }
 
-    /**
-     * This method will draw a card from the deck at a random place
-     */
     public Card drawARandomCard() {
-        var index=new Random().nextInt(52);
+        var index=new Random().nextInt(nbCards);
         return deck.get(index);
     }
 
@@ -144,6 +108,7 @@ public class DeckOfCards extends Observed {
         shuffleStrategy = commandBackup.shuffleStrategy;;
         topCard = commandBackup.topCard;;
         activeCard = commandBackup.activeCard;
+        nbCards = commandBackup.nbCards;
         alertObservers();
     }
 
@@ -151,5 +116,13 @@ public class DeckOfCards extends Observed {
         System.out.println(history.toString());
     }
 
+    public void updateGame(DeckOfCards newGame) {
+        this.topCard = 0;
+        this.deck = newGame.deck;
+        this.nbCards = newGame.nbCards;
+        this.backOfCardImage = newGame.backOfCardImage;
+        this.activeCard = newGame.activeCard;
+        alertObservers();
+    }
 
 }

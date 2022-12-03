@@ -14,7 +14,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        DeckOfCards deckOfCards = new DeckOfCards();
+        DeckOfCards deckOfCards = new DeckOfCardsClassic();
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(getClass().getResource("DeckView.fxml"));
         loader.setControllerFactory(iC -> new DeckView(deckOfCards));

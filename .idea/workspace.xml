@@ -6,7 +6,33 @@
   <component name="ChangeListManager">
     <list default="true" id="9ab4138a-0a1e-4a5e-bd05-145e2aade408" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/eu/telecomnancy/visualcards/DeckView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/eu/telecomnancy/visualcards/DeckView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/eu/telecomnancy/visualcards/CardBelote.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/eu/telecomnancy/visualcards/CardBelote.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/eu/telecomnancy/visualcards/DeckOfCardsScopa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/eu/telecomnancy/visualcards/DeckOfCardsScopa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/eu/telecomnancy/visualcards/DeckView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/eu/telecomnancy/visualcards/DeckView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/eu/telecomnancy/visualcards/images/jack_of_clubs.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/eu/telecomnancy/visualcards/images/jack_of_clubs.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/eu/telecomnancy/visualcards/images/jack_of_clubs2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/eu/telecomnancy/visualcards/images/jack_of_diamonds.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/eu/telecomnancy/visualcards/images/jack_of_diamonds.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/eu/telecomnancy/visualcards/images/jack_of_diamonds2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/eu/telecomnancy/visualcards/images/jack_of_hearts.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/eu/telecomnancy/visualcards/images/jack_of_hearts.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/eu/telecomnancy/visualcards/images/jack_of_hearts2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/eu/telecomnancy/visualcards/images/jack_of_spades.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/eu/telecomnancy/visualcards/images/jack_of_spades.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/eu/telecomnancy/visualcards/images/jack_of_spades2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/eu/telecomnancy/visualcards/images/king_of_clubs.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/eu/telecomnancy/visualcards/images/king_of_clubs.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/eu/telecomnancy/visualcards/images/king_of_clubs2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/eu/telecomnancy/visualcards/images/king_of_diamonds.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/eu/telecomnancy/visualcards/images/king_of_diamonds.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/eu/telecomnancy/visualcards/images/king_of_diamonds2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/eu/telecomnancy/visualcards/images/king_of_hearts.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/eu/telecomnancy/visualcards/images/king_of_hearts.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/eu/telecomnancy/visualcards/images/king_of_hearts2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/eu/telecomnancy/visualcards/images/king_of_spades.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/eu/telecomnancy/visualcards/images/king_of_spades.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/eu/telecomnancy/visualcards/images/king_of_spades2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/eu/telecomnancy/visualcards/images/queen_of_clubs.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/eu/telecomnancy/visualcards/images/queen_of_clubs.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/eu/telecomnancy/visualcards/images/queen_of_clubs2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/eu/telecomnancy/visualcards/images/queen_of_diamonds.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/eu/telecomnancy/visualcards/images/queen_of_diamonds.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/eu/telecomnancy/visualcards/images/queen_of_diamonds2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/eu/telecomnancy/visualcards/images/queen_of_hearts.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/eu/telecomnancy/visualcards/images/queen_of_hearts.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/eu/telecomnancy/visualcards/images/queen_of_hearts2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/eu/telecomnancy/visualcards/images/queen_of_spades.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/eu/telecomnancy/visualcards/images/queen_of_spades.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/eu/telecomnancy/visualcards/images/queen_of_spades2.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,12 +78,15 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/eu/telecomnancy/visualcards/images" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\LV\OneDrive\Bureau\visualcards\src\main\resources\eu\telecomnancy\visualcards\images" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="eu.telecomnancy.visualcards" />
     </key>
@@ -99,7 +128,8 @@
       <workItem from="1669735878146" duration="8501000" />
       <workItem from="1669883492872" duration="705000" />
       <workItem from="1669986159587" duration="19354000" />
-      <workItem from="1670085679418" duration="593000" />
+      <workItem from="1670085679418" duration="663000" />
+      <workItem from="1670197113256" duration="1410000" />
     </task>
     <servers />
   </component>

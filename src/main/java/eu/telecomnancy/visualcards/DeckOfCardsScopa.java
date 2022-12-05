@@ -10,11 +10,10 @@ public class DeckOfCardsScopa extends DeckOfCards {
     public DeckOfCardsScopa(ArrayList<Card> deck) {
         this.nbCards = 40;
         this.deck = deck;
-        URL imageFile=getClass().getResource("images/black_joker.png");
+        URL imageFile=getClass().getResource("images/back_scopa.png");
         if (imageFile!=null) {
             backOfCardImage = new Image(imageFile.toString());
         }
-
     }
 
     public DeckOfCardsScopa() {
@@ -25,7 +24,7 @@ public class DeckOfCardsScopa extends DeckOfCards {
                 deck.add(new CardScopa(value,color));
             }
         }
-        URL imageFile=getClass().getResource("images/black_joker.png");
+        URL imageFile=getClass().getResource("images/back_scopa.png");
         if (imageFile!=null) {
             backOfCardImage = new Image(imageFile.toString());
         }

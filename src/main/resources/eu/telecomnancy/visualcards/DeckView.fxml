@@ -16,7 +16,6 @@
             </Menu>
             <Menu text="CardDeck">
                 <MenuItem onAction="#shuffle" text="Shuffle"/>
-                <MenuItem text="Sort"/>
             </Menu>
             <Menu text="Shuffle Strategy">
                 <MenuItem text="Default" onAction="#toggleDefaultShuffle"/>

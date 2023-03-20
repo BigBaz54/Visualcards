@@ -1,4 +1,9 @@
-# Exercices
+# Contexte
+Application JavaFX permettant de visualiser différents decks de cartes. 
+
+Le but de l'exercice était d'implémenter quelques Design Patterns.
+
+Tout ce qui suit est la consigne pour cette application.
 
 ## Installation
 

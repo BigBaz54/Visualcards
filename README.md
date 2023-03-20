@@ -3,7 +3,13 @@ Application JavaFX permettant de visualiser différents decks de cartes.
 
 Le but de l'exercice était d'implémenter quelques Design Patterns.
 
+## Aperçu
+
+![image](https://user-images.githubusercontent.com/96493391/226438466-38e0fb91-4c7e-4a31-bef7-6fcc215c9aba.png)
+
 Tout ce qui suit est la consigne pour cette application.
+
+
 
 ## Installation
 
